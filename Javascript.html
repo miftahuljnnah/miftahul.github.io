@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas JavaScript</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="jumbotron mt-5">
+            <h1 class="text-center mb-4 mt-5">Tugas Javascript</h1>
+            <div class="text-center mt-4 mb-5">
+                <a href="Index.html" class="btn btn-primary">Home</a>
+                <a href="artikel.html" class="btn btn-primary">About Me</a>
+                <a href="jadwal.html" class="btn btn-primary">Jadwal Kuliah</a>
+                <a href="pendidikan.html" class="btn btn-primary">Pendidikan</a>
+                <a href="daftar_barang.html" class="btn btn-primary">Daftar Barang</a>
+                <a href="bukutamu.html" class="btn btn-primary">Buku Tamu</a>
+                <a href="https://tik.ft.unm.ac.id" class="btn btn-primary">JTIK</a>
+                <a href="Javascript.html" class="btn btn-primary">Javascript</a>
+            </div>
+    <h2>Menghitung Luas Persegi Panjang</h2>
+<button onclick="hitungLuas()">Hitung Luas</button>
+
+<p id="luasPersegiPanjang"></p>
+
+<h2>Memeriksa Angka Positif, Negatif, atau Nol</h2>
+<input type="number" id="angka" placeholder="Masukkan angka">
+<button onclick="cekAngka()">Cek</button>
+
+<p id="hasilPengecekan"></p>
+
+<script>
+    function hitungLuas() {
+        var panjang = parseFloat(prompt("Masukkan panjang persegi panjang:"));
+        var lebar = parseFloat(prompt("Masukkan lebar persegi panjang:"));
+        var luas = panjang * lebar;
+        document.getElementById("luasPersegiPanjang").innerHTML = "Luas Persegi Panjang adalah: " + luas;
+    }
+
+    function cekAngka() {
+        var angka = parseFloat(document.getElementById("angka").value);
+        var pesan = "";
+
+        if (angka > 0) {
+            pesan = "Angka ini adalah positif.";
+        } else if (angka < 0) {
+            pesan = "Angka ini adalah negatif.";
+        } else {
+            pesan = "Angka ini adalah nol.";
+        }
+
+        document.getElementById("hasilPengecekan").innerHTML = pesan;
+    }
+</script>
+</body>
+</html>
